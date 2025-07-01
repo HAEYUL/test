@@ -1,0 +1,736 @@
+/* 넥슨 폰트를 전체에 적용해요 */
+body {
+    font-family: 'NEXON Lv1 Gothic OTF', sans-serif;
+    background: #fff; /* 배경은 흰색이에요 */
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* 헤더 높이만큼 여백을 줘서 내용이 가려지지 않게 해요 */
+}
+
+/* 헤더를 항상 상단에 고정해요 */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 12px #0001;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 16px 32px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 48px; /* 로고 크기를 정해요 */
+    height: 48px;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.main-nav a:hover {
+    background: #f0f0f0;
+}
+
+.login-btn {
+    background: #fff; /* 흰색 바탕 */
+    color: #222;
+    border: 2px solid #222; /* 검은색 테두리 */
+    border-radius: 25px; /* 둥글게 만들어요 */
+    padding: 8px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.login-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 8px;
+    }
+    .main-nav {
+        gap: 10px;
+    }
+    .brand-name {
+        font-size: 1.1rem;
+    }
+    .logo {
+        width: 36px;
+        height: 36px;
+    }
+    .login-btn {
+        padding: 6px 16px;
+        font-size: 0.95rem;
+    }
+    body {
+        padding-top: 110px;
+    }
+}
+
+/* 히어로 파트 전체를 꾸며요 */
+.hero-carousel {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+/* 슬라이드들을 가로로 쌓아요 */
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 500px;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.slide.active {
+  display: flex;
+}
+
+.hero-img {
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 8px #000, 0 0 10px #222;
+  z-index: 2;
+  width: 90vw;
+  max-width: 600px;
+}
+
+.hero-text .brand {
+  font-size: 2.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 12px;
+}
+.hero-text h2 {
+  font-size: 1.7rem;
+  margin: 0 0 10px 0;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+/* 구매하기 버튼의 글자 그림자를 없애고 선명하게 해요 */
+.buy-btn {
+  display: inline-block;
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 8px #2222;
+  transition: background 0.2s, color 0.2s;
+  text-shadow: none;
+}
+.buy-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0.8;
+  transition: background 0.2s, color 0.2s;
+}
+.arrow.left {
+  left: 16px;
+}
+.arrow.right {
+  right: 16px;
+}
+.arrow:hover {
+  background: #222;
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .slide, .hero-img {
+    height: 320px;
+  }
+  .hero-text {
+    max-width: 90vw;
+    font-size: 0.95rem;
+  }
+  .hero-text .brand {
+    font-size: 1.3rem;
+  }
+  .arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 500px) {
+  .slide, .hero-img {
+    height: 180px;
+  }
+  .hero-text {
+    font-size: 0.8rem;
+    padding: 0 2vw;
+  }
+  .buy-btn {
+    padding: 7px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* product 부분 전체를 꾸며요 */
+.product-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+.shop-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.product-title {
+  font-size: 2rem;
+  color: #111;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 16px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 18px 12px 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 420px;
+  position: relative;
+}
+.product-img {
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  margin-left: 3px;
+  margin-right: 3px;
+  display: block;
+}
+.product-desc {
+  width: 100%;
+  text-align: center;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.product-desc h2 {
+  font-size: 1.2rem;
+  margin: 10px 0 8px 0;
+  color: #222;
+}
+.desc-short, .desc-full {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.more-btn {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #222;
+  border-radius: 18px;
+  padding: 6px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s, color 0.2s;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  margin-bottom: 16px;
+}
+.more-btn:hover {
+  background: #222;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .product-card {
+    min-height: 0;
+  }
+}
+@media (max-width: 600px) {
+  .product-title {
+    font-size: 1.2rem;
+  }
+  .shop-image {
+    max-height: 180px;
+  }
+  .product-card {
+    padding: 10px 4px 16px 4px;
+    min-height: 0;
+  }
+  .product-img {
+    max-width: 98vw;
+    height: 120px;
+  }
+  .more-btn {
+    margin-bottom: 8px;
+  }
+}
+
+/* Review 부분 전체를 꾸며요 */
+.review-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+.review-title {
+  font-size: 2rem;
+  color: #111;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px 16px;
+}
+.review-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 24px 12px 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.review-stars {
+  color: #FFD600;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+.review-text {
+  font-size: 1.05rem;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.reviewer {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 6px;
+}
+@media (max-width: 900px) {
+  .review-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .review-title {
+    font-size: 1.2rem;
+  }
+  .review-card {
+    padding: 12px 4px 10px 4px;
+  }
+  .review-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* CEO 인사말 부분 전체를 꾸며요 */
+.ceo-section {
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  padding: 0 16px 32px 16px;
+}
+.ceo-container {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 32px 24px;
+  gap: 32px;
+}
+.ceo-img {
+  width: 180px;
+  min-width: 120px;
+  max-width: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #0002;
+}
+.ceo-message-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.ceo-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #222;
+}
+.ceo-message-short, .ceo-message-full {
+  font-size: 1.05rem;
+  color: #222;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  word-break: keep-all;
+}
+.ceo-more-btn, .ceo-close-btn {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #222;
+  border-radius: 18px;
+  padding: 6px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.ceo-more-btn:hover, .ceo-close-btn:hover {
+  background: #222;
+  color: #fff;
+}
+.ceo-contact {
+  margin-top: 32px;
+  background: #222;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px;
+  padding: 18px 8px 12px 8px;
+  box-shadow: 0 2px 12px #0002;
+}
+.ceo-phone {
+  font-size: 1.3rem;
+  color: #FFD600;
+  font-weight: bold;
+}
+@media (max-width: 900px) {
+  .ceo-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 6px;
+    gap: 18px;
+  }
+  .ceo-img {
+    width: 120px;
+    max-width: 160px;
+  }
+}
+@media (max-width: 600px) {
+  .ceo-title {
+    font-size: 1.1rem;
+  }
+  .ceo-message-short, .ceo-message-full {
+    font-size: 0.95rem;
+  }
+  .ceo-contact {
+    font-size: 0.95rem;
+    padding: 10px 2px 8px 2px;
+  }
+}
+
+/* Q&A 부분 전체를 꾸며요 */
+.qa-section {
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  padding: 0 16px 32px 16px;
+}
+.qa-title {
+  font-size: 2rem;
+  color: #111;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.qa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 24px 18px 18px 18px;
+  margin-bottom: 18px;
+}
+.qa-input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 8px 10px;
+  border: 1.5px solid #bbb;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  resize: vertical;
+}
+.qa-submit-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.qa-submit-btn:hover {
+  background: #FFD600;
+  color: #222;
+}
+.qa-reply {
+  background: #e6f7e6;
+  color: #1a7a1a;
+  border-radius: 10px;
+  padding: 14px 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px #0001;
+}
+.faq-section {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 18px 12px 12px 12px;
+}
+.faq-title {
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.faq-q {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+}
+.faq-a {
+  color: #444;
+  font-size: 0.98rem;
+}
+@media (max-width: 600px) {
+  .qa-title {
+    font-size: 1.1rem;
+  }
+  .faq-title {
+    font-size: 1rem;
+  }
+  .faq-section {
+    padding: 8px 2px 6px 2px;
+  }
+}
+
+/* 푸터 전체를 꾸며요 */
+.main-footer {
+  background: #222;
+  color: #fff;
+  padding: 32px 12px 18px 12px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+.footer-top {
+  margin-bottom: 10px;
+}
+.footer-link {
+  color: #FFD600;
+  text-decoration: underline;
+  margin: 0 4px;
+  font-size: 1rem;
+}
+.footer-info {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+.footer-info a {
+  color: #FFD600;
+}
+.footer-copyright {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+.footer-sns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+.sns-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 3px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+.sns-icon img:hover {
+  box-shadow: 0 4px 16px #FFD60099;
+  transform: scale(1.12);
+}
+@media (max-width: 600px) {
+  .main-footer {
+    font-size: 0.92rem;
+    padding: 18px 2px 10px 2px;
+  }
+  .footer-sns {
+    gap: 10px;
+  }
+  .sns-icon img {
+    width: 26px;
+    height: 26px;
+    padding: 2px;
+  }
+}
+
+/* 우하단 챗봇 버튼을 예쁘게 고정해요 */
+.chatbot-fab {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 56px;
+  height: 56px;
+  background: #FFD600;
+  color: #222;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px #0003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 2000;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.chatbot-fab:hover {
+  background: #222;
+  color: #FFD600;
+  box-shadow: 0 8px 24px #FFD60099;
+  transform: scale(1.08);
+}
+@media (max-width: 600px) {
+  .chatbot-fab {
+    right: 12px;
+    bottom: 12px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+  }
+} 

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중간계AI 스튜디오 헤더</title>
+    <!-- 넥슨 웹폰트 불러오기 -->
+    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NEXONLv1Gothic.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 전체를 감싸는 부분이에요 -->
+    <header class="main-header">
+        <!-- 가장 왼쪽에 로고 이미지가 있어요 -->
+        <img src="images/logo1.png" alt="로고" class="logo">
+        <!-- 로고 옆에 브랜드 이름이 있어요 -->
+        <span class="brand-name">중간계AI 스튜디오</span>
+        <!-- 가운데에 메뉴들이 있어요 -->
+        <nav class="main-nav">
+            <a href="#product">제품</a>
+            <a href="#review">고객후기</a>
+            <a href="#ceo">인사말</a>
+        </nav>
+        <!-- 맨 오른쪽에 로그인 버튼이 있어요 -->
+        <button class="login-btn">로그인</button>
+    </header>
+    <!-- 히어로 파트 시작이에요 -->
+    <section class="hero-carousel">
+      <!-- 왼쪽 화살표 -->
+      <button class="arrow left" aria-label="이전 슬라이드">&#60;</button>
+      <!-- 슬라이드 이미지와 텍스트를 감싸는 부분이에요 -->
+      <div class="slides">
+        <!-- 첫 번째 슬라이드 -->
+        <div class="slide active">
+          <img src="images/hero01.jpg" alt="슬라이드1" class="hero-img">
+          <div class="hero-text">
+            <span class="brand">중간계 AI 스튜디오</span>
+            <h2>당신의 아이디어, 브랜드가 되다</h2>
+            <p>브랜드 이름에서부터 웹사이트까지, 사업성공을 함께 합니다</p>
+            <a href="https://smartstore.naver.com/" target="_blank" class="buy-btn">구매하기</a>
+          </div>
+        </div>
+        <!-- 두 번째 슬라이드 -->
+        <div class="slide">
+          <img src="images/hero02.jpg" alt="슬라이드2" class="hero-img">
+          <div class="hero-text">
+            <span class="brand">중간계 AI 스튜디오</span>
+            <h2>쉽고 빠르게, 원하는 것을 구축하다</h2>
+            <p>아이디어에서 실현까지 중간계 AI가 함께합니다</p>
+            <a href="https://smartstore.naver.com/" target="_blank" class="buy-btn">구매하기</a>
+          </div>
+        </div>
+        <!-- 세 번째 슬라이드 -->
+        <div class="slide">
+          <img src="images/hero03.jpg" alt="슬라이드3" class="hero-img">
+          <div class="hero-text">
+            <span class="brand">중간계 AI 스튜디오</span>
+            <h2>상상력에 날개를, 날아 오르다</h2>
+            <p>꿈이 아니라, 현실이 될 것입니다</p>
+            <a href="https://smartstore.naver.com/" target="_blank" class="buy-btn">구매하기</a>
+          </div>
+        </div>
+      </div>
+      <!-- 오른쪽 화살표 -->
+      <button class="arrow right" aria-label="다음 슬라이드">&#62;</button>
+    </section>
+    <!-- 히어로 파트 끝이에요 -->
+    <!-- product 부분 시작이에요 -->
+    <section class="product-section" id="product">
+      <!-- 매장 대표 이미지에요 -->
+      <img src="images/shop1.jpg" alt="매장 대표 이미지" class="shop-image">
+      <!-- 제품 타이틀이에요 -->
+      <h1 class="product-title">중간계 AI 스튜디오 4가지 상품</h1>
+      <!-- 2x2 제품 그리드에요 -->
+      <div class="product-grid">
+        <!-- 제품 1 -->
+        <div class="product-card">
+          <img src="images/pd1.jpg" alt="AI 상세페이지" class="product-img">
+          <div class="product-desc">
+            <h2>AI 상세페이지</h2>
+            <p class="desc-short">AI,인공지능 추천에 최적화된 상세페이지<br>상세페이지 기획 + 구성 + 디자인<br>고객의 구매 패턴을 분석하여 개인 맞춤형 상품을 구성합니다.</p>
+            <p class="desc-full" style="display:none;">AI,인공지능 추천에 최적화된 상세페이지<br>상세페이지 기획 + 구성 + 디자인<br>고객의 구매 패턴을 분석하여 개인 맞춤형 상품을 구성합니다.<br>AI 추천 알고리즘을 최적화하여, 전환율을 높일수 있는 상세페이지를 제작합니다.<br>기간. 난이도에 따라, 1주일~2주일<br>가격<br>1. 디자인 작업 : 50~80만<br>2. 디자인 + 세부기획 : 100~200만<br>3. 디자인 + 세부기획 + 영상 + 효과 : 200~500만<br>촬영이 필요할 경우,  추가 기간, 비용, 발생</p>
+            <button class="more-btn">더보기</button>
+          </div>
+        </div>
+        <!-- 제품 2 -->
+        <div class="product-card">
+          <img src="images/pd2.jpg" alt="AI 쇼츠, 릴스" class="product-img">
+          <div class="product-desc">
+            <h2>AI 쇼츠, 릴스 (30~60초)</h2>
+            <p class="desc-short">AI,인공지능 추천에 쇼츠,릴스 기획, 제작<br>고객의 제품과 브랜드 특징을 고려하여, 주목도 높은 쇼츠, 릴스를 제작합니다.<br>AI 추천 알고리즘을 최적화하여, 주목도, 전환율을 높일수 있는 쇼츠,릴스입니다.</p>
+            <p class="desc-full" style="display:none;">AI,인공지능 추천에 쇼츠,릴스 기획, 제작<br>고객의 제품과 브랜드 특징을 고려하여, 주목도 높은 쇼츠, 릴스를 제작합니다.<br>AI 추천 알고리즘을 최적화하여, 주목도, 전환율을 높일수 있는 쇼츠,릴스입니다.<br>기간. 난이도에 따라, 1주일~2주일<br>가격<br>1. 단순 편집 : 30~50만<br>2. 기획 + 디자인 + 편집  : 50~100만<br>3. 기획 + 디자인 + 영상 효과 : 100~200만<br>4. 촬영이 필요할 경우,  추가 기간, 비용, 발생</p>
+            <button class="more-btn">더보기</button>
+          </div>
+        </div>
+        <!-- 제품 3 -->
+        <div class="product-card">
+          <img src="images/pd3.jpg" alt="웹페이지, 랜딩페이지" class="product-img">
+          <div class="product-desc">
+            <h2>웹페이지, 랜딩페이지</h2>
+            <p class="desc-short">AI, 인공지능 최적화 웹페이지 기획, 디자인, 배포<br>AI 기반 전략으로 웹페이지 성과를 극대화하세요.<br>기획부터 디자인, 배포까지 전 과정 원스톱 지원!</p>
+            <p class="desc-full" style="display:none;">AI, 인공지능 최적화 웹페이지 기획, 디자인, 배포<br>AI 기반 전략으로 웹페이지 성과를 극대화하세요.<br>기획부터 디자인, 배포까지 전 과정 원스톱 지원! 방문자 행동을 분석해 전환율을 높입니다. 당신의 웹페이지,랜딩페이지를  이제 인공지능에 최적화 하십시오.<br>기간. 난이도에 따라, 1개월~3개월<br>가격<br>1. 브랜드, 제품, 예약, 구매, 챗봇 : 500만<br>2. 브랜드, 제품, 예약, 구매, 챗봇 + 로그인인증 : 700만<br>3. 브랜드, 제품, 예약, 구매, 챗봇 + 로그인인증 + DB  + 고객관리 : 1000만</p>
+            <button class="more-btn">더보기</button>
+          </div>
+        </div>
+        <!-- 제품 4 -->
+        <div class="product-card">
+          <img src="images/pd4.jpg" alt="브랜드 Naming Package" class="product-img">
+          <div class="product-desc">
+            <h2>브랜드 Naming Package</h2>
+            <p class="desc-short">현존 최고수준의 브랜드 Name Package<br>창업자의 철학을 담아 직관적이고 감각적인 네이밍을 만들어드립니다.<br>스시도쿠 겐, 견체공학, 헤겔의 빛, 신성의 숲 등 잊을 수 없는 브랜드 이름을 지어드립니다.</p>
+            <p class="desc-full" style="display:none;">현존 최고수준의 브랜드 Name Package<br>창업자의 철학을 담아 직관적이고 감각적인 네이밍을 만들어드립니다.<br>스시도쿠 겐, 견체공학, 헤겔의 빛, 신성의 숲, 쁘띠쿠아, 홍국시, 도찜계찜, age button등 듣기만 하면 잊을수 없는 브랜드 이름을 지어드립니다<br>브랜드 이름, 슬로건, 약속, 페르소나등 브랜드전략의 기초를 만들어드립니다.<br>1. 브랜드 이름 대안 3가지  제시<br>2. 고객 페르소나 정의<br>3. 슬로건, 핵심 메시지, 브랜드 스토리 개발<br>기간. 약 1개월 소요<br>가격: 500만원 (중간계 기존 수강생은 30% 할인)</p>
+            <button class="more-btn">더보기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- product 부분 끝이에요 -->
+    <!-- Review 부분 시작이에요 -->
+    <section class="review-section" id="review">
+      <h1 class="review-title">고객 후기</h1>
+      <div class="review-grid">
+        <!-- 첫 번째 후기 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">AI 상세페이지 덕분에<br>매출이 정말 많이 늘었어요!<br>설명도 쉽고, 디자인도 예뻐서<br>고객들이 좋아해요.</p>
+          <div class="reviewer">- 김사장님(카페)</div>
+        </div>
+        <!-- 두 번째 후기 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">AI 쇼츠로<br>가게 홍보가 쉬워졌어요.<br>짧고 임팩트 있게<br만들어줘서 감사합니다!</p>
+          <div class="reviewer">- 이사장님(분식집)</div>
+        </div>
+        <!-- 세 번째 후기 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">웹페이지 덕분에<br>예약이 편해졌어요.<br>고객 관리도 쉬워져서<br정말 만족합니다.</p>
+          <div class="reviewer">- 박사장님(미용실)</div>
+        </div>
+        <!-- 네 번째 후기 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">브랜드 네이밍이<br>정말 마음에 들어요.<br>가게 이름 덕분에<br손님이 늘었어요!</p>
+          <div class="reviewer">- 최사장님(빵집)</div>
+        </div>
+        <!-- 다섯 번째 후기 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">AI 상세페이지로<br>온라인 판매가 쉬워졌어요.<br>설명도 친절하고<br결과도 만족해요.</p>
+          <div class="reviewer">- 정사장님(의류점)</div>
+        </div>
+        <!-- 여섯 번째 후기 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">쇼츠, 릴스 영상이<br>정말 멋져요!<br>가게 홍보에 큰 도움이<br되었습니다.</p>
+          <div class="reviewer">- 오사장님(식당)</div>
+        </div>
+      </div>
+    </section>
+    <!-- Review 부분 끝이에요 -->
+    <!-- CEO 인사말 부분 시작이에요 -->
+    <section class="ceo-section" id="ceo">
+      <div class="ceo-container">
+        <!-- 왼쪽에 사장님 사진이 있어요 -->
+        <img src="images/man3.jpg" alt="대표 사진" class="ceo-img">
+        <!-- 오른쪽에 인사말 글상자가 있어요 -->
+        <div class="ceo-message-box">
+          <h1 class="ceo-title">CEO 인사말</h1>
+          <!-- 4줄만 보이는 부분이에요 -->
+          <div class="ceo-message-short">
+            소상공인과 자영업 사장님들의 성공, 그것이 저의 사명입니다.<br>
+            안녕하십니까? 저는 지난 35년간 비즈니스와 마케팅 한길을 걸으며,<br>
+            CJ, 배달의민족, 러쉬, 여기어때, 야나두, 일동제약, 커피에 반하다,<br>
+            단꿈아이 등 수많은 기업과 브랜드에서 경영 자문과 마케팅 전략을 맡아 왔습니다.
+          </div>
+          <!-- 전체 인사말이 보이는 부분이에요 (처음엔 안 보여요) -->
+          <div class="ceo-message-full" style="display:none;">
+            소상공인과 자영업 사장님들의 성공, 그것이 저의 사명입니다.<br>
+            안녕하십니까? 저는 지난 35년간 비즈니스와 마케팅 한길을 걸으며,<br>
+            CJ, 배달의민족, 러쉬, 여기어때, 야나두, 일동제약, 커피에 반하다,<br>
+            단꿈아이 등 수많은 기업과 브랜드에서 경영 자문과 마케팅 전략을 맡아 왔습니다.<br>
+            특히, 스타트업과 소상공인 사장님들의 빠르고 정확한 의사결정, 현장에 맞는 전략 실행을 지원하며, 현장에서 길어 올린 실전 경험을 쌓아왔습니다.<br>
+            이제 AI 시대를 맞아, 그동안의 경험과 통찰을 바탕으로 '중간계 AI 스튜디오'라는 새로운 서비스를 시작합니다.<br>
+            브랜드 기획, Naming, 브랜드 스토리, 슬로건 부터 상세페이지, 쇼츠·릴스, 웹사이트, 그리고 인공지능 기반 챗봇에 이르기까지, 변화하는 시대에 꼭 필요한 실행 솔루션을 제공합니다.<br>
+            AI 기술과 현장 경험이 결합된 실용적이고 감각적인 지원, 그것이 중간계 AI 스튜디오가 드리는 약속입니다.<br>
+            소상공인과 자영업 사장님들의 더 큰 도전과 성공을 함께하겠습니다.<br>
+            감사합니다.<br><br>
+            중간계 AI 스튜디오<br>
+            대표 신병철
+          </div>
+          <button class="ceo-more-btn">더보기</button>
+          <button class="ceo-close-btn" style="display:none;">닫기</button>
+        </div>
+      </div>
+      <!-- 상담 안내에요 -->
+      <div class="ceo-contact">
+        상담이 필요하시면, <b>중간계 고객센터</b>로 연락주십시오.<br>
+        <span class="ceo-phone">02-6952-9454, 9455</span>
+      </div>
+    </section>
+    <!-- CEO 인사말 부분 끝이에요 -->
+    <!-- Q&A 부분 시작이에요 -->
+    <section class="qa-section">
+      <h1 class="qa-title">Q&A (질문과 답변)</h1>
+      <!-- 질문 입력 폼이에요 -->
+      <form class="qa-form">
+        <label for="qa-title-input">질문 제목</label>
+        <input type="text" id="qa-title-input" class="qa-input" placeholder="질문 제목을 입력하세요" required>
+        <label for="qa-content-input">질문 내용</label>
+        <textarea id="qa-content-input" class="qa-input" rows="3" placeholder="궁금한 점을 입력하세요" required></textarea>
+        <button type="submit" class="qa-submit-btn">질문하기</button>
+      </form>
+      <!-- 질문 접수 메시지에요 (처음엔 안 보여요) -->
+      <div class="qa-reply" style="display:none;">질문이 접수되었습니다. 곧 이메일로 답변 드리겠습니다.</div>
+      <!-- FAQ 자주 묻는 질문이에요 -->
+      <div class="faq-section">
+        <h2 class="faq-title">자주 묻는 질문</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q">Q: 쇼츠 영상은 어떤 스타일로 만들어지나요?</div>
+            <div class="faq-a">→ 행동유도형, 장점소개형, 브랜드홍보형 등 목적에 따라 스타일을 맞춰 제작합니다.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Q: 웹페이지는 모바일에서도 볼 수 있나요?</div>
+            <div class="faq-a">→ 네, 반응형 웹 디자인으로 모바일, 태블릿, PC에 모두 최적화됩니다.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Q: 챗봇도 포함되나요?</div>
+            <div class="faq-a">→ 네,  챗봇 Chat GPTs 를 이용하여, 인공지능 챗봇을  구성합니다.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Q: 브랜드 이름은 몇 개나 받아볼 수 있나요?</div>
+            <div class="faq-a">→ 총 3개의 대안을 제안드리며, 그중 1개를 최종 선택하실 수 있습니다.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Q: 브랜드 스토리는 어떤 분량으로 제공되나요?</div>
+            <div class="faq-a">→ 600자 / 400자 / 200자 3가지 분량으로 제공됩니다.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Q&A 부분 끝이에요 -->
+    <!-- 푸터 부분 시작이에요 -->
+    <footer class="main-footer">
+      <div class="footer-top">
+        <a href="#" class="footer-link">이용약관</a> |
+        <a href="#" class="footer-link">개인정보처리방침</a>
+      </div>
+      <div class="footer-info">
+        고객센터 <b>02-6952-9454, 9455</b> | FAX 02-6952-9553<br>
+        운영시간 오전10시~ 오후 6시(주말, 공휴일 제외)<br>
+        주소 서울특별시 서초구 논현로 173, 5층<br>
+        사업자등록번호 211-88-80844 | 통신판매업신고 2021-서울서초-3279<br>
+        업체명 주식회사 중간계캠퍼스 | 대표이사 신병철<br>
+        개인정보관리 책임자 전진 <a href="mailto:midcampus31@gmail.com" class="footer-link">midcampus31@gmail.com</a><br>
+        <span class="footer-copyright">COPYRIGHT 중간계캠퍼스. ALL RIGHTS RESERVED</span>
+      </div>
+      <div class="footer-sns">
+        <!-- SNS 아이콘은 images 폴더의 logo2.png(인스타), logo13.png(페북), logo.png(유튜브), logo1.png(블로그) 사용 -->
+        <a href="https://instagram.com" target="_blank" class="sns-icon" title="인스타그램"><img src="images/logo2.png" alt="인스타그램"></a>
+        <a href="https://facebook.com" target="_blank" class="sns-icon" title="페이스북"><img src="images/logo13.png" alt="페이스북"></a>
+        <a href="https://youtube.com" target="_blank" class="sns-icon" title="유튜브"><img src="images/logo.png" alt="유튜브"></a>
+        <a href="https://blog.naver.com" target="_blank" class="sns-icon" title="블로그"><img src="images/logo1.png" alt="블로그"></a>
+      </div>
+    </footer>
+    <!-- 푸터 부분 끝이에요 -->
+    <!-- 우하단 챗봇 버튼 시작이에요 -->
+    <a href="https://chatgpt.com/g/g-68417276b33c819193345bb830488cca-haeyulaicaesbos" class="chatbot-fab" target="_blank" title="해율AI챗봇">
+      <!-- 챗봇 아이콘 (이모지/이미지/텍스트 등 원하는 걸로 교체 가능) -->
+      <span style="font-size:2rem;">🤖</span>
+      <!-- <img src="images/ai-bot.png" alt="챗봇" style="width:36px; height:36px;"> -->
+    </a>
+    <!-- 우하단 챗봇 버튼 끝이에요 -->
+    <script src="main.js"></script>
+</body>
+</html> 
